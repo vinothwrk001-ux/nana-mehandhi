@@ -23,8 +23,8 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
   const baseClasses = "inline-flex items-center justify-center gap-2 font-medium transition-all duration-300 rounded-full";
   
   const variants = {
-    solid: "bg-gradient-brand text-white px-6 py-3 hover:glow-primary hover:scale-105",
-    outline: "border border-primary text-white px-6 py-3 hover:bg-primary/10 hover:glow-primary",
+    solid: "bg-gradient-brand text-white px-4 md:px-6 py-2.5 md:py-3 text-sm md:text-base hover:glow-primary hover:scale-105",
+    outline: "border border-primary text-white px-4 md:px-6 py-2.5 md:py-3 text-sm md:text-base hover:bg-primary/10 hover:glow-primary",
     floating: "fixed bottom-6 right-6 bg-gradient-brand text-white p-4 shadow-lg hover:scale-110 z-50 glow-primary"
   };
 

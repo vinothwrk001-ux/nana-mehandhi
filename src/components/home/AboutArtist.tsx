@@ -4,7 +4,7 @@ import aboutImage from '../../assets/About .jpeg';
 
 const AboutArtist: React.FC = () => {
   return (
-    <section id="about" className="py-24 md:py-32 relative bg-brand-black overflow-hidden">
+    <section id="about" className="py-16 md:py-32 relative bg-brand-black overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
       
@@ -45,7 +45,7 @@ const AboutArtist: React.FC = () => {
               <span className="text-primary text-sm tracking-[0.2em] uppercase font-medium">The Artist</span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-serif mb-8 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-serif mb-8 leading-tight">
               Crafted With Passion, <br />
               <span className="text-brand-text-secondary italic">Created With Tradition.</span>
             </h2>

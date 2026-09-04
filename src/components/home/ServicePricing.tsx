@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Crown, Sparkles, Heart, PartyPopper, Flower2, Baby } from 'lucide-react';
+import { Crown, Sparkles, Heart, PartyPopper, Flower2, Baby, ChevronLeft, ChevronRight } from 'lucide-react';
 import WhatsAppButton from '../shared/WhatsAppButton';
 
 const categories = [
@@ -67,15 +67,34 @@ const renderPackageCard = (title: string, elbowPrice: string, aboveElbowPrice: s
 
 const ServicePricing: React.FC = () => {
   const [activeTab, setActiveTab] = useState('bridal');
+  const tabsRef = useRef<HTMLDivElement>(null);
+
+  const scrollTabs = (direction: 'left' | 'right') => {
+    const currentIndex = categories.findIndex((c) => c.id === activeTab);
+    const total = categories.length;
+    const nextIndex = direction === 'left' 
+      ? (currentIndex === 0 ? total - 1 : currentIndex - 1)
+      : (currentIndex === total - 1 ? 0 : currentIndex + 1);
+      
+    const nextTabId = categories[nextIndex].id;
+    setActiveTab(nextTabId);
+    
+    if (tabsRef.current) {
+      const tabButton = tabsRef.current.querySelector(`[data-tab-id="${nextTabId}"]`);
+      if (tabButton) {
+        tabButton.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+    }
+  };
 
   return (
-    <section id="pricing" className="py-24 bg-brand-black relative overflow-hidden">
+    <section id="pricing" className="py-16 md:py-24 bg-brand-black relative overflow-hidden">
       <div className="absolute top-1/3 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
       
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary text-sm tracking-[0.2em] uppercase font-medium mb-4 block">Pricing & Packages</span>
-          <h2 className="text-4xl md:text-5xl font-serif leading-tight mb-6">
+          <h2 className="text-3xl md:text-5xl font-serif leading-tight mb-6">
             Detailed Packages <br />
             <span className="text-brand-text-secondary italic">For Every Occasion.</span>
           </h2>
@@ -86,12 +105,24 @@ const ServicePricing: React.FC = () => {
 
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Tabs Navigation */}
-          <div className="lg:w-1/3 flex flex-col gap-2">
-            {categories.map((cat) => (
+          <div className="lg:w-1/3 flex flex-col">
+            
+            <div className="flex items-center gap-1 md:gap-4 lg:block">
+              <button 
+                onClick={() => scrollTabs('left')} 
+                className="p-2 -ml-3 shrink-0 flex items-center justify-center text-brand-text-muted hover:text-primary transition-colors lg:hidden"
+                aria-label="Scroll Left"
+              >
+                <ChevronLeft size={20} />
+              </button>
+            
+              <div ref={tabsRef} className="flex flex-row lg:flex-col gap-2 overflow-x-auto py-2 flex-1 snap-x snap-mandatory" style={{ scrollbarWidth: 'none' }}>
+              {categories.map((cat) => (
               <button
                 key={cat.id}
+                data-tab-id={cat.id}
                 onClick={() => setActiveTab(cat.id)}
-                className={`flex items-center gap-3 px-6 py-4 rounded-sm text-left transition-all duration-300 border ${
+                className={`flex items-center justify-center lg:justify-start gap-2 lg:gap-3 px-2 lg:px-6 py-2.5 lg:py-4 rounded-sm text-center lg:text-left transition-all duration-300 border shrink-0 snap-center w-full lg:w-auto ${
                   activeTab === cat.id 
                     ? 'bg-brand-elevated border-primary/30 text-white shadow-[0_0_15px_rgba(240,90,145,0.05)]' 
                     : 'bg-transparent border-transparent text-brand-text-muted hover:text-white hover:bg-white/5'
@@ -100,12 +131,22 @@ const ServicePricing: React.FC = () => {
                 <div className={`${activeTab === cat.id ? 'text-primary' : ''}`}>
                   {cat.icon}
                 </div>
-                <span className="font-medium tracking-wide">{cat.name}</span>
+                <span className="font-medium tracking-wide text-xs sm:text-sm lg:text-base whitespace-nowrap">{cat.name}</span>
                 {activeTab === cat.id && (
                   <motion.div layoutId="activeTabIndicator" className="ml-auto w-1.5 h-1.5 rounded-full bg-primary" />
                 )}
               </button>
             ))}
+              </div>
+              
+              <button 
+                onClick={() => scrollTabs('right')} 
+                className="p-2 -mr-3 shrink-0 flex items-center justify-center text-brand-text-muted hover:text-primary transition-colors lg:hidden"
+                aria-label="Scroll Right"
+              >
+                <ChevronRight size={20} />
+              </button>
+            </div>
           </div>
 
           {/* Tab Content */}

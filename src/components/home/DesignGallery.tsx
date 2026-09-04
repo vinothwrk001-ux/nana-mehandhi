@@ -18,7 +18,7 @@ const categories = [
 
 const DesignGallery: React.FC = () => {
   return (
-    <section id="designs" className="py-24 bg-brand-dark">
+    <section id="designs" className="py-16 md:py-24 bg-brand-dark">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <motion.div 
@@ -29,7 +29,7 @@ const DesignGallery: React.FC = () => {
             className="max-w-2xl"
           >
             <span className="text-primary text-sm tracking-[0.2em] uppercase font-medium mb-4 block">Portfolio</span>
-            <h2 className="text-4xl md:text-5xl font-serif leading-tight">
+            <h2 className="text-3xl md:text-5xl font-serif leading-tight">
               A Selection of <br className="hidden md:block" />
               <span className="text-brand-text-secondary italic">Beautiful Artworks.</span>
             </h2>

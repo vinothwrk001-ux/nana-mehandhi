@@ -13,7 +13,7 @@ const features = [
 
 const WhyChooseUs: React.FC = () => {
   return (
-    <section className="py-24 bg-brand-black border-y border-white/5">
+    <section className="py-16 md:py-24 bg-brand-black border-y border-white/5">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row gap-16 items-center">
           
@@ -25,7 +25,7 @@ const WhyChooseUs: React.FC = () => {
             className="w-full md:w-1/3"
           >
             <span className="text-primary text-sm tracking-[0.2em] uppercase font-medium mb-4 block">Our Promise</span>
-            <h2 className="text-4xl font-serif leading-tight mb-6">
+            <h2 className="text-3xl md:text-4xl font-serif leading-tight mb-6">
               Why Choose <br />
               <span className="text-brand-text-secondary italic">Our Mehendi?</span>
             </h2>

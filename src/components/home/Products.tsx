@@ -26,7 +26,7 @@ const afterCareProducts = [
 
 const Products: React.FC = () => {
   return (
-    <section id="products" className="py-24 bg-brand-dark">
+    <section id="products" className="py-16 md:py-24 bg-brand-dark">
       <div className="container mx-auto px-6 md:px-12">
         
         {/* Organic Cones Intro */}
@@ -39,7 +39,7 @@ const Products: React.FC = () => {
             className="w-full lg:w-1/2"
           >
             <span className="text-primary text-sm tracking-[0.2em] uppercase font-medium mb-4 block">Our Products</span>
-            <h2 className="text-4xl md:text-5xl font-serif leading-tight mb-6">
+            <h2 className="text-3xl md:text-5xl font-serif leading-tight mb-6">
               Pure Ingredients. <br />
               <span className="text-brand-text-secondary italic">Beautiful Stain.</span>
             </h2>
@@ -139,7 +139,7 @@ const Products: React.FC = () => {
               </ul>
               <WhatsAppButton 
                 variant="solid" 
-                text="Order Bridal Cones" 
+                text="Order Now" 
                 message="Hi, I would like to order Bridal Mehendi Cones." 
                 className="w-full py-2.5"
               />

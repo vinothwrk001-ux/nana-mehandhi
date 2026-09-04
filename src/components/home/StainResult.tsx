@@ -7,11 +7,11 @@ import finalImg from '../../assets/Final Dark Stain.png';
 
 const StainResult: React.FC = () => {
   return (
-    <section className="py-24 bg-brand-dark relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-brand-dark relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary text-sm tracking-[0.2em] uppercase font-medium mb-4 block">Quality</span>
-          <h2 className="text-4xl md:text-5xl font-serif leading-tight mb-6">
+          <h2 className="text-3xl md:text-5xl font-serif leading-tight mb-6">
             See the <span className="text-gradient italic">Difference.</span>
           </h2>
           <p className="text-brand-text-secondary leading-relaxed font-light text-lg">
@@ -39,7 +39,7 @@ const StainResult: React.FC = () => {
             <p className="text-sm text-brand-text-muted">Fresh, smooth paste applied.</p>
           </motion.div>
 
-          <ArrowRight className="text-brand-text-muted hidden md:block rotate-90 md:rotate-0" size={32} />
+          <ArrowRight className="text-brand-text-muted block rotate-90 md:rotate-0 my-4 md:my-0 opacity-50 md:opacity-100" size={32} />
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -60,7 +60,7 @@ const StainResult: React.FC = () => {
             <p className="text-sm text-brand-text-muted">Bright orange tone after removal.</p>
           </motion.div>
 
-          <ArrowRight className="text-brand-text-muted hidden md:block rotate-90 md:rotate-0" size={32} />
+          <ArrowRight className="text-brand-text-muted block rotate-90 md:rotate-0 my-4 md:my-0 opacity-50 md:opacity-100" size={32} />
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}

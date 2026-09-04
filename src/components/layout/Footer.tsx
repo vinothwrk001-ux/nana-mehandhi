@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black pt-20 pb-10 border-t border-white/5 relative overflow-hidden">
+    <footer className="bg-black pt-16 md:pt-20 pb-10 border-t border-white/5 relative overflow-hidden">
       {/* Subtle background glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
       

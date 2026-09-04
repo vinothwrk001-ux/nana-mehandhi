@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
             </span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif leading-[1.1] mb-6">
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-serif leading-[1.1] mb-6">
             Where Tradition <br />
             <span className="text-gradient italic pr-2">Meets Beautiful Art.</span>
           </h1>

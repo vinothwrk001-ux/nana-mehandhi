@@ -20,11 +20,11 @@ const instaImages = [
 
 const InstagramShowcase: React.FC = () => {
   return (
-    <section className="py-24 bg-brand-black border-y border-white/5 relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-brand-black border-y border-white/5 relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary text-sm tracking-[0.2em] uppercase font-medium mb-4 block">Social</span>
-          <h2 className="text-4xl md:text-5xl font-serif leading-tight mb-4">
+          <h2 className="text-3xl md:text-5xl font-serif leading-tight mb-4">
             More Designs on <span className="text-brand-text-secondary italic">Instagram</span>
           </h2>
           <a 

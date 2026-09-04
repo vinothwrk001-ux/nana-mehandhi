@@ -38,14 +38,14 @@ const services = [
 
 const Services: React.FC = () => {
   return (
-    <section id="services" className="py-24 bg-brand-black border-y border-white/5 relative overflow-hidden">
+    <section id="services" className="py-16 md:py-24 bg-brand-black border-y border-white/5 relative overflow-hidden">
       {/* Background Effect */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-secondary/5 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary text-sm tracking-[0.2em] uppercase font-medium mb-4 block">Offerings</span>
-          <h2 className="text-4xl md:text-5xl font-serif leading-tight mb-6">
+          <h2 className="text-3xl md:text-5xl font-serif leading-tight mb-6">
             Services Tailored <br />
             <span className="text-brand-text-secondary italic">For Your Special Occasion.</span>
           </h2>

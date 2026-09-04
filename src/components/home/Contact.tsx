@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="py-24 bg-brand-dark border-t border-white/5">
+    <section id="contact" className="py-16 md:py-24 bg-brand-dark border-t border-white/5">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col lg:flex-row gap-16">
           
@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
             className="w-full lg:w-1/2"
           >
             <span className="text-primary text-sm tracking-[0.2em] uppercase font-medium mb-4 block">Get In Touch</span>
-            <h2 className="text-4xl md:text-5xl font-serif leading-tight mb-6">
+            <h2 className="text-3xl md:text-5xl font-serif leading-tight mb-6">
               Let's Create <br />
               <span className="text-brand-text-secondary italic">Something Beautiful.</span>
             </h2>
@@ -72,11 +72,11 @@ const Contact: React.FC = () => {
               <h3 className="text-2xl font-serif text-white mb-8">Quick Connect</h3>
               
               <div className="space-y-6 relative z-10">
-                <WhatsAppButton text="Chat on WhatsApp" className="w-full justify-center py-4 text-base" />
+                <WhatsAppButton text="Chat on WhatsApp" className="w-full justify-center py-3 md:py-4 text-sm md:text-base" />
                 
                 <a 
                   href="tel:+917395870780"
-                  className="w-full flex items-center justify-center gap-2 border border-white/20 text-white px-6 py-4 rounded-full hover:bg-white/5 transition-all font-medium"
+                  className="w-full flex items-center justify-center gap-2 border border-white/20 text-white px-4 md:px-6 py-3 md:py-4 rounded-full hover:bg-white/5 transition-all font-medium text-sm md:text-base"
                 >
                   <Phone size={20} />
                   Call Us Directly
@@ -86,7 +86,7 @@ const Contact: React.FC = () => {
                   href="https://instagram.com/nana_mehendi_designs"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 border border-white/20 text-white px-6 py-4 rounded-full hover:bg-white/5 transition-all font-medium"
+                  className="w-full flex items-center justify-center gap-2 border border-white/20 text-white px-4 md:px-6 py-3 md:py-4 rounded-full hover:bg-white/5 transition-all font-medium text-sm md:text-base"
                 >
                   <Instagram size={20} />
                   Follow on Instagram
